@@ -73,9 +73,9 @@ class App extends Component {
     const {filteredStudents} =  this.state;
     return (
       <div className="main-bg">
-        <div className="view-window">
-          <SearchByName handleChange={this.handleSearchByNameChange} searchName={this.state.searchName}/>
-          <SearchByTag handleChange={this.handleSearchByTag} searchTag={this.state.searchTag}/>
+        <div className="view-window" id="style-1">
+          <SearchByName className="search-bars" handleChange={this.handleSearchByNameChange} searchName={this.state.searchName}/>
+          <SearchByTag className="search-bars" handleChange={this.handleSearchByTag} searchTag={this.state.searchTag}/>
           {filteredStudents.map( (student, index) => (
             <Student
             key={student.id}
